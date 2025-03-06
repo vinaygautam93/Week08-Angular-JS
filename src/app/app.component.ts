@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';  //  Import FormsModule for two-way binding
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
+  standalone: true,  //  Standalone component
+  imports: [CommonModule, FormsModule],  //  Import FormsModule directly
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  bridgeLabzLogo: string = 'https://github.com/user-attachments/assets/90074df5-7d3c-43fb-ad0b-481cfb1c8407';
-  bridgeLabzUrl: string = 'https://www.bridgelabz.com';
-
-  openBridgeLabz() {
-    window.open(this.bridgeLabzUrl, '_blank');
-  }
+  userName: string = '';  //  Variable for user input
 }
