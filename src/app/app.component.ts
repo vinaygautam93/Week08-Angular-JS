@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // Message to display
-  message: string = 'Hello from BridgeLabz';
+  message = 'Hello from BridgeLabz';
+  bridgeLabzLogo = 'https://github.com/user-attachments/assets/90074df5-7d3c-43fb-ad0b-481cfb1c8407';
 }
