@@ -1,8 +1,9 @@
-<div>
-    <label for="name">Enter Your Name: </label>
-    <input type="text" id="name" [(ngModel)]="userName">
-    <!--  Two-way binding -->
+<h2>Hello from BridgeLabz</h2>
 
-    <h2>Hello {{ userName }} from BridgeLabz</h2>
-    <!--  Dynamic Message -->
-</div>
+<input type="text" [(ngModel)]="userName" (input)="validateUserName()" placeholder="Enter your name" />
+
+<!-- Show error if input is invalid -->
+<p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
+<!-- Show greeting only if input is valid -->
+<p *ngIf="userName && !errorMessage">Hello, {{ userName }}!</p>
